@@ -1,0 +1,401 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+header{
+    width: 100%;        
+    background-color: #101010;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+}
+
+footer{
+    padding: 20px;
+    color: white;
+    background: black;
+    margin-top: 0px;
+    text-align: center;
+}
+
+.referencias{
+    padding-top: 10px;
+    text-decoration: none;    
+    color: #00a4a7;
+    transition: .7s ease;
+    cursor: pointer;
+}
+
+.referencias:hover{    
+    color: #00a4a7;
+    font-size: 21px;
+    font-weight: bold;
+}
+
+.navbar{    
+    max-width: 1200px;    
+    margin: 0 auto;
+    padding:  0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.container{
+    display: flex;
+    flex-direction: row; /*vai ser usado para fazer os containers um abaixo do outro no MBL [column]*/
+    position: relative;     
+    height: 250px;    
+    width: 100%;   
+    top: 55vh;
+    flex-wrap: wrap;  
+    justify-content: space-around;
+    align-items: center;
+}
+
+.child{
+    font-weight: bold;    
+    font-size: 16px;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    width: 280px;
+    height: 250px;
+    background-color: #222;
+    color: #48f9fc;
+    border: 3px solid black;
+}
+
+.child p{    
+    font-size: 13px;
+    color: white;
+    border-radius: 10px;        
+    text-align: left;
+    width: auto;
+    height: auto;            
+}
+
+.logo{
+    width: 90px;
+    height: 50px;    
+    background-color: #555;    
+    border-radius: 10px;
+    text-align: center;     
+    padding: 12px; 
+}
+
+.logo a{
+    color: #fff;
+    text-decoration: none;
+} 
+
+.hamburguer{
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border-radius: 5px;
+    border: 0;
+    position: relative;
+    cursor: pointer;
+    display: none;
+}
+
+.hamburguer:after {
+    content: "";
+    position: absolute;
+    top: 35%;
+    left: 15%;
+    width: 70%;
+    height: 5%;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.hamburguer:before {
+    content: "";
+    position: absolute;
+    top: 55%;
+    left: 15%;
+    width: 70%;
+    height: 5%;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.menu{
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.menu li{
+    margin-left: 10px;
+}
+
+.menu a{
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #555;
+    transition: .5s ease;    
+}
+
+.menu a:hover{
+    color: #00a4a7;
+}
+
+.btn-login{
+    display: inline-block;
+    font-weight: bold;
+    background-color: white;
+    color: #00a4a7;
+    font-size: 20px;
+    padding: 5px 10px;
+    border-radius: 6px;        
+    border: none;
+    cursor: pointer;
+    transition: 0.8s;
+}
+
+.btn-login:hover{
+    background-color: rgb(39, 39, 39);
+    color: white;    
+}  
+
+.corpo-principal{   
+    background-image: radial-gradient(circle, #a9f7ef 20%, #00a4a7); 
+    height: 100vh;
+    width: 100%;
+    position: Relative;
+ }
+
+ .ttPrimario{     
+     color: black;
+     font-size: 13px;
+     position: absolute;     
+     text-align: center;
+     top: 110px;
+     left: 50%;
+     transform: translate(-50%, -50%);     
+ }
+
+ .ttPrimario p{     
+    color: black;
+    font-size: 140px;
+    position: absolute;
+    text-align: Center;
+    top: 130px;
+    left: 50%;
+    transform: translate(-50%, -50%);    
+    font-weight: bold;    
+}
+
+::selection{
+    background-color: #00a4a7;
+    color: black;
+}
+
+@media screen and (max-height: 620px) {
+    .container{
+        display: flex;
+        flex-direction: row; /*vai ser usado para fazer os containers um abaixo do outro no MBL [column]*/
+        position: relative;     
+        height: 250px;    
+        width: 100%;   
+        top: 350px;
+        flex-wrap: wrap;  
+        justify-content: space-around;
+        align-items: center;
+    }
+}    
+
+@media screen and (max-width: 1213px) {
+
+    .ttPrimario{     
+        color: black;
+        font-size: 13px;
+        position: absolute;
+        text-align: center;
+        top: 120px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    } 
+
+    .ttPrimario p{     
+        color: black;
+        font-size: 150px;
+        position: absolute;
+        text-align: Center;
+        top: 140px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin-top: 3%;
+    }
+
+    .corpo-principal{           
+        height: 100vh;
+     }    
+
+     @media screen and (max-width: 1136px) {
+
+        .corpo-principal{           
+            min-height: 1050px;
+         }
+        
+    }
+
+}
+
+@media screen and (max-width: 720px) {
+
+    .ttPrimario{     
+        color: black;
+        font-size: 13px;
+        width: 80%;
+        text-align: center;
+        top: 130px;
+        transform: translate(-50%, -50%);
+    }    
+
+    .ttPrimario p{     
+        color: black;
+        font-size: 95px;
+        position: absolute;
+        text-align: Center;
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin-top: 13%;
+        font-weight: bold;       
+    }
+
+    .hamburguer{
+        display: block;
+        z-index: 999;        
+    }
+
+    .menu{
+        position: fixed;
+        top: 0;
+        right: -110%;
+        height: 100vh;
+        margin: 0;
+        background-color: #222;
+        width: 100%;
+        max-width: 250px;
+        padding: 100px 20px;
+        flex-direction: column;
+        transition: .5s ease;
+    }
+
+    .menu.active{
+        right: 0%;
+    }
+
+}
+
+@media screen and (max-width: 629px) {
+
+    .ttPrimario{     
+        color: black;
+        font-size: 13px;
+        width: 80%;
+        text-align: center;
+        top: 130px;
+        transform: translate(-50%, -50%);
+    }    
+
+    .ttPrimario p{     
+        color: black;
+        font-size: 95px;
+        position: absolute;
+        text-align: Center;
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin-top: 13%;
+        font-weight: bold;       
+    }
+}
+
+@media screen and (max-width: 576px) {
+
+    .container{
+        display: flex;
+        flex-direction: row;
+        position: relative;     
+        height: 250px;    
+        width: 100%;   
+        top: 350px;
+        flex-wrap: wrap;  
+        justify-content: space-around;
+        align-items: center;
+    }    
+
+    .corpo-principal{         
+        min-height: 1430px;
+     }        
+
+     .ttPrimario{     
+        color: black;
+        font-size: 13px;
+        width: 80%;
+        text-align: center;
+        top: 140px;
+        transform: translate(-50%, -50%);
+    }    
+
+    .ttPrimario p{     
+        color: black;
+        font-size: 75px;
+        position: absolute;
+        text-align: Center;
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin-top: 13%;
+        font-weight: bold;       
+    }
+
+    .hamburguer{
+        display: block;
+        z-index: 999;        
+    }
+
+    .menu{
+        position: fixed;
+        top: 0;
+        right: -110%;
+        height: 100vh;
+        margin: 0;
+        background-color: #222;
+        width: 100%;
+        max-width: 250px;
+        padding: 100px 20px;
+        flex-direction: column;
+        transition: .5s ease;
+    }
+
+    .menu.active{
+        right: 0%;
+    }
+}
+
+.corpo-secundario{
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+}
+
+.corpo-secundario h1{
+    color: #101010;
+    font-size: 100px;
+    font-weight: bold;
+}
